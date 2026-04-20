@@ -5,7 +5,7 @@
 ```mermaid
 flowchart LR
   input[Запрос клиента] --> api[FastAPI /workflow]
-  api --> decomposer[Decomposer: декомпозиция]
+  api --> decomposer[Decomposer: декомпозиция на llm MLXBackend: Qwen3.5-9B]
   decomposer --> router{Router}
   router -->|legal| qa_search[Retriever_QA]
   router -->|kb| kb_search[Retriever_KB]
